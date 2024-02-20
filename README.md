@@ -15,3 +15,5 @@ The layout of this directory maps subdirectories to the respective experiments w
 
 
 
+# TODO
+explain how to build these firmware images
