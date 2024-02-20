@@ -1,0 +1,28 @@
+File	Testcase	Requirements	Comment
+CURIOSITY/CURIOSITY-GPIO.elf	Read	0x9D0002C4 || 0x9D0002D0	Success case of NUTTX read ioctl
+	Set/Clear	0x9D0002C4 -> 0x9D0002B4 || 0x9D0002D0 -> 0x9D0002B4	Second write loop iteration indicating write success
+CURIOSITY/CURIOSITY-ADC.elf	Read	ADC_ResultIsReady -> ADC_ResultGet	Read of converted result after successful conversion
+CURIOSITY/CURIOSITY-I2C_INT.elf	Read	0x9D0005A4	Successful I2C read
+	Write	0x9D0005F0	Successful I2C write
+CURIOSITY/CURIOSITY-GPIO_INT.elf	Callback/IRQ	controlLED	Invocation of GPIO interrupt handler
+CURIOSITY/CURIOSITY-USART.elf	Read	0x9D001C08	Serial char is present in serial rx buffer and returned successfully
+	Write	0x9D001F40	Serial write followed by transmission completion callback
+CURIOSITY/CURIOSITY-SPI.elf	Read	0x9D0002A0 || 0x9D0002DC	spi_transfer_bytes MMIO read bb
+	Write	0x9D0002AC	spi_transfer_bytes MMIO write bb
+CURIOSITY/CURIOSITY-CORETIMER.elf	Callback/IRQ	timeout_handler	invocation of timer callback
+CURIOSITY/CURIOSITY-FREERTOS-TIMER1.elf	Callback/IRQ	vPortIncrementTick	Invocation of timer callback to increment timer tick count
+	Read	xTaskGetTickCount	Successfully reading timer value
+CURIOSITY/CURIOSITY-FREERTOS-SOFT_INT.elf	Callback/IRQ	vTaskSwitchContext	One byte or two byte read transfer cases of I2C_MasterReceive_BTF
+STARTER/STARTER-USART.elf	Read	0x9D00288C	Successful read from receive buffer (which gets filled in IRQ handler)
+	Write	0x9D002EDC	Successful write case in uart_write
+STARTER/STARTER-GPIO_INT.elf	Callback/IRQ	controlLED	"Invocation of gpio callback. Symbol known to IDA as ""cb"""
+STARTER/STARTER-GPIO.elf	Read	0x9D0009D4 || 0x9D0009E0	Successful GPIO read command in main loop
+	Set/Clear	0x9D0009D4 -> 0x9D0009C4 || 0x9D0009E0 -> 0x9D0009C4	Successive gpio set / clear invocations in main loop
+STARTER/STARTER-I2C_INT.elf	Read	0x9D000094	i2c_callback_handler read case
+	Write	0x9D0000DC	i2c_callback_handler write case
+STARTER/STARTER-FREERTOS-TIMER1.elf	Callback/IRQ	vPortIncrementTick	"Invocation of callback function. Symbol known to IDA as ""cb"""
+	Read	xTaskGetTickCount	Successfully reading timer value
+STARTER/STARTER-FREERTOS-SOFT_INT.elf	Callback/IRQ	vTaskSwitchContext	Core software interrupt is triggered for context switch
+STARTER/STARTER-ADC.elf	Read	ADCHS_ChannelResultIsReady -> ADCHS_ChannelResultGet	adc_conversion_check -> get result in
+STARTER/STARTER-SPI.elf	Read	0x9D000CB0	spi_receiver done
+STARTER/STARTER-CORETIMER.elf	Callback/IRQ	timeout_handler	invocation of timer callback

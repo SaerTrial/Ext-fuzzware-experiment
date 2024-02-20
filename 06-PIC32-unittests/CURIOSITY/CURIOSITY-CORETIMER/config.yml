@@ -1,0 +1,146 @@
+#include:
+#- ./../../configs/hw/boards/pic32mz_memory.yml
+#- ./syms.yml
+
+memory_map:
+  sram:
+    base_addr: 0xa0000000
+    permissions: rw-
+    size: 0x20000
+  text:
+    base_addr: 0x9d000000
+    file: ./basic_exercises.elf
+    permissions: r-x
+    size: 0x5000
+    file_offset: 0x10000
+  isr:
+    base_addr: 9fc01000
+    file: ./basic_exercises.elf
+    permissions: r-x
+    size: 0x1000
+    file_offset: 0x011000
+  boot:
+    base_addr: 0xbfc00000
+    file: ./basic_exercises.elf
+    permissions: r-x
+    size: 0x1000
+    file_offset: 0x020000
+    is_entry: True
+  mmio_1:
+    base_addr: 0xbf800000
+    size: 0x10000
+    permissions: rw-
+  mmio_2:
+    base_addr: 0xbf882000
+    size: 0x5000
+    permissions: rw-
+  interrupt_control_registers:
+    base_addr: 0xbf881000
+    size: 0x1000
+    permissions: rw-
+
+interrupt_triggers:
+  idle_irq:
+    every_nth_tick: 150
+    fuzz_mode: round_robin  
+
+use_nvic: true  
+nvic:
+  vtor: 0
+  num_vecs: 256
+  processor: pic32mx3XX4XX
+
+
+arch: MIPS32
+endianness: LE
+initial_sp: 0xa001fff8
+entry_point: 0xbfc00000
+
+use_systick: false
+
+
+symbols:
+  0x9d000000: 'CORE_TIMER_Handler'
+  0x9d000120: '_general_exception_context'
+  0x9d0001fc: 'CORE_TIMER_InterruptHandler'
+  0x9d0002a4: 'SYS_Initialize'
+  0x9d00032c: '__dummy_decode_dinit'
+  0x9d000334: '__pic32_data_init'
+  0x9d000338: '_dinit_init'
+  0x9d0003a8: 'CLK_Initialize'
+  0x9d000414: 'CORETIMER_Start'
+  0x9d000480: '_main_entry'
+  0x9d0004b4: '__crt0_exit'
+  0x9d0004d4: '_DefaultInterrupt'
+  0x9d00051c: 'CORETIMER_Initialize'
+  0x9d000560: '__pic32_software_reset'
+  0x9d0005a4: 'main'
+  0x9d0005d4: 'GPIO_Initialize'
+  0x9d0005f8: 'EVIC_Initialize'
+  0x9d000630: 'CORETIMER_CallbackSet'
+  0x9d000648: '_general_exception_handler'
+  0x9d000660: '_bootstrap_exception_handler'
+  0x9d000678: '_nmi_handler'
+  0x9d000690: '__dinit_clear_needed'
+  0x9d0006a8: 'timeout_handler'
+  0x9d0006bc: '_dinit_func_table'
+  0x9d0006d0: '.dinit'
+  0x9d0006e0: '_on_reset'
+  0x9d0006e8: '_on_bootstrap'
+  0x9fc01180: '_gen_exception'
+  0x9fc01200: '__vector_dispatch_0'
+  0x9fc01220: '__vector_dispatch_1'
+  0x9fc01240: '__vector_dispatch_2'
+  0x9fc01260: '__vector_dispatch_3'
+  0x9fc01280: '__vector_dispatch_4'
+  0x9fc012a0: '__vector_dispatch_5'
+  0x9fc012c0: '__vector_dispatch_6'
+  0x9fc012e0: '__vector_dispatch_7'
+  0x9fc01300: '__vector_dispatch_8'
+  0x9fc01320: '__vector_dispatch_9'
+  0x9fc01340: '__vector_dispatch_10'
+  0x9fc01360: '__vector_dispatch_11'
+  0x9fc01380: '__vector_dispatch_12'
+  0x9fc013a0: '__vector_dispatch_13'
+  0x9fc013c0: '__vector_dispatch_14'
+  0x9fc013e0: '__vector_dispatch_15'
+  0x9fc01400: '__vector_dispatch_16'
+  0x9fc01420: '__vector_dispatch_17'
+  0x9fc01440: '__vector_dispatch_18'
+  0x9fc01460: '__vector_dispatch_19'
+  0x9fc01480: '__vector_dispatch_20'
+  0x9fc014a0: '__vector_dispatch_21'
+  0x9fc014c0: '__vector_dispatch_22'
+  0x9fc014e0: '__vector_dispatch_23'
+  0x9fc01500: '__vector_dispatch_24'
+  0x9fc01520: '__vector_dispatch_25'
+  0x9fc01540: '__vector_dispatch_26'
+  0x9fc01560: '__vector_dispatch_27'
+  0x9fc01580: '__vector_dispatch_28'
+  0x9fc015a0: '__vector_dispatch_29'
+  0x9fc015c0: '__vector_dispatch_30'
+  0x9fc015e0: '__vector_dispatch_31'
+  0x9fc01600: '__vector_dispatch_32'
+  0x9fc01620: '__vector_dispatch_33'
+  0x9fc01640: '__vector_dispatch_34'
+  0x9fc01660: '__vector_dispatch_35'
+  0x9fc01680: '__vector_dispatch_36'
+  0x9fc016a0: '__vector_dispatch_37'
+  0x9fc016c0: '__vector_dispatch_38'
+  0x9fc016e0: '__vector_dispatch_39'
+  0x9fc01700: '__vector_dispatch_40'
+  0x9fc01720: '__vector_dispatch_41'
+  0x9fc01740: '__vector_dispatch_42'
+  0x9fc01760: '__vector_dispatch_43'
+  0x9fc01780: '__vector_dispatch_44'
+  0x9fc017a0: '__vector_dispatch_45'
+  0xa0000000: 'coreTmr'
+  0xbfc00000: '_reset'
+  0xbfc00008: '_startup'
+  0xbfc00028: '_no_nmi'
+  0xbfc0006c: '_start_bss_init'
+  0xbfc00084: '_bss_init'
+  0xbfc0008c: '_bss_check'
+  0xbfc000f4: '_ramfunc_done'
+  0xbfc00380: '_bev_exception'
+  0xbfc00480: '__DbgExecReturn'

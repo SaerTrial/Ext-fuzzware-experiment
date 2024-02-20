@@ -1,0 +1,25 @@
+File	Testcase	Requirements	Comments
+PIC32MX/Curiosity.elf	bitextract	pc_9d000514_mmio_bf806030	Bitmask operation
+	set	pc_9d00008c_mmio_bf806030, pc_9d0000b0_mmio_bf806030	If else statement
+	passthrough	pc_9d000930_mmio_bf806040	Write back
+	unmodeled	pc_9d00096c_mmio_bf806030	Full value
+	constant	pc_9d000124_mmio_bf806010	Busy check in a while loop
+	set	pc_9d000014_mmio_bf806030	Switch case
+	unmodeled	pc_9d000768_mmio_bf806030	MMIO read hidden in a long loop
+	set	pc_9d0001a4_mmio_bf806030	If-else case within a function
+	unmodeled	pc_9d00017c_mmio_bf806030	Full value write in a function
+	bitextract	pc_9d000190_mmio_bf806030	Bitmask opeartion within a function
+	passthrough	pc_9d00015c_mmio_bf806030	Write-back through a function
+	unmodeled	pc_9d0001d0_mmio_bf806030	Dead write to non-local memory
+PIC32MZ/StarterKit.elf	bitextract	pc_9d000ca4_mmio_bf822030	Bitmask operation
+	set	pc_9d000664_mmio_bf822000, pc_9d000688_mmio_bf822000	If else statement
+	passthrough	pc_9d00102c_mmio_bf822040	Write back
+	unmodeled	pc_9d001068_mmio_bf822030	Full value
+	constant	pc_9d000034_mmio_bf822010	Busy check in a while loop
+	set	pc_9d0005ec_mmio_bf822030	Switch case
+	unmodeled	pc_9d000efc_mmio_bf822030	MMIO read hidden in a long loop
+	set	pc_9d0000b4_mmio_bf822030	If-else case within a function
+	unmodeled	pc_9d00008c_mmio_bf822030	Full value write in a function
+	bitextract	pc_9d0000a0_mmio_bf822030	Bitmask opeartion within a function
+	passthrough	pc_9d00006c_mmio_bf822030	Write-back through a function
+	unmodeled	pc_9d0000e0_mmio_bf822030	Dead write to non-local memory
