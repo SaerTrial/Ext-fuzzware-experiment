@@ -79,6 +79,13 @@ for target_name in target_names:
         print(f"\n[WARNING] Could not find any project directories for target '{target_name}'")
         continue
 
+    from exclude_interrupt_bbl import aggregate_interrupt_bbs
+    if target_name == "interrupt-mode":
+        bb_trace_interrupt_path = os.path.join(DIR, target_name, "bb-trace-filter-interrupt")
+        if not os.path.exists(bb_trace_interrupt_path):
+            raise ValueError("no bb trace specified to filter interrupt-dependent code coverage")
+        valid_bbs_interrupt = aggregate_interrupt_bbs(bb_trace_interrupt_path)
+
     for projdir in sorted(projdirs):
         if "_old" in projdir:
             continue
@@ -89,8 +96,11 @@ for target_name in target_names:
         entries = parse_coverage_by_second_file(cov_over_time_path)
 
         gnuplot_lines = []
+        filtered_bbs = 0
         for seconds_into_experiment, num_bbs_total, new_bbs_since_last in entries:
-            gnuplot_lines.append(f"{seconds_into_experiment/3600:.08f} {num_bbs_total}")
+            if target_name == "interrupt-mode":
+                filtered_bbs += len(valid_bbs_interrupt.intersection(new_bbs_since_last))
+            gnuplot_lines.append(f"{seconds_into_experiment/3600:.08f} {num_bbs_total-filtered_bbs}")
 
         plot_data_path = os.path.join(plots_dir, target_name.replace("/", "_") + "_" + os.path.basename(projdir) + ".dat")
         print(f"\nWriting gnuplot coverage data to: {plot_data_path}")
@@ -103,7 +113,7 @@ for target_name in target_names:
         continue
 
     gnuplot_png_outpath = os.path.join(plots_dir, "plot" + target_name.replace("/", "_") + ".png")
-    gnuplot_code = f"set terminal png; set output '{gnuplot_png_outpath}'; set title 'Coverage {target_name}'; set ylabel '#BBs Found(bbs)'; set xlabel 'Time(h)';"
+    gnuplot_code = f"set terminal png size 800,640; set output '{gnuplot_png_outpath}'; set title 'Coverage {target_name}'; set ylabel '#BBs Found(bbs)'; set xlabel 'Time(h)';"
     gnuplot_code += "set xrange [0:24] noextend; set xtics 0,4,24; "
     gnuplot_code += "plot "
 
