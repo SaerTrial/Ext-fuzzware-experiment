@@ -35,7 +35,7 @@ memory_map:
 
 interrupt_triggers:
   idle_irq:
-    every_nth_tick: 150
+    every_nth_tick: 0x200
     fuzz_mode: round_robin 
 
 
