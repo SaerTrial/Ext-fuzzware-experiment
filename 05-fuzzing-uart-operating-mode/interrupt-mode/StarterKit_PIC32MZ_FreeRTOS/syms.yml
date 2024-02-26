@@ -52,7 +52,7 @@ symbols:
   0x800078c8: 'xDelayedTaskList1'
   0x800078dc: 'pxReadyTasksLists'
   0x80007940: 'data'
-  0x80007990: 'portPinCbObj'
+  0x8000799c: 'portPinCbObj'
   0x9d000000: 'simple_tlb_refill_vector'
   0x9d000010: 'UART2_Initialize'
   0x9d000100: '_cache_err_vector'
