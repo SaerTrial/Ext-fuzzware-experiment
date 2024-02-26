@@ -12,7 +12,7 @@ PIC32MX/Curiosity.elf	bitextract	pc_9d000514_mmio_bf806030	Bitmask operation
 	passthrough	pc_9d00015c_mmio_bf806030	Write-back through a function
 	unmodeled	pc_9d0001d0_mmio_bf806030	Dead write to non-local memory
 PIC32MZ/StarterKit.elf	bitextract	pc_9d000ca4_mmio_bf822030	Bitmask operation
-	set	pc_9d000664_mmio_bf822000, pc_9d000688_mmio_bf822000	If else statement
+	set	pc_9d000664_mmio_bf822030, pc_9d000688_mmio_bf822030	If else statement
 	passthrough	pc_9d00102c_mmio_bf822040	Write back
 	unmodeled	pc_9d001068_mmio_bf822030	Full value
 	constant	pc_9d000034_mmio_bf822010	Busy check in a while loop
