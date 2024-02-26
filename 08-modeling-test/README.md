@@ -8,7 +8,7 @@ In its most basic form, reproduce the experiments by running:
 ```
 
 ## Expected Result
-With totally 24 test cases, there are 17 successes and 7 failures as expected.
+With totally 24 test cases, there are 18 successes and 6 failures as expected.
 
 ```
 Got 18 successes and 6 failures
