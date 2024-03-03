@@ -1,6 +1,6 @@
 # Ext-fuzzware Experiments
 
-These experiments are designed to demonstrate the capability of extended Fuzzware.
+These experiments are designed to evaluate the capability of extended Fuzzware against PIC32MZ/X firmware samples.
 
 # Directory Layout
 The layout of this directory maps subdirectories to the respective experiments within the publication.
