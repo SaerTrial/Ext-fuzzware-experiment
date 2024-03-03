@@ -12,6 +12,7 @@ The layout of this directory maps subdirectories to the respective experiments w
 | [07-RTOS-scheduling](07-RTOS-scheduling)           | 7 | Task scheduling between different tasks in FreeRTOS     | Evaluate if tasks are scheduled properly under certain scenarios by a couple of functional testing |
 | [08-modeling-test](08-modeling-test)                         | 8 |  Generation of peripheral access models  | Evaluate if the extended system generates a correct model under different scenarios |
 | [09-json-parse](09-json-parse)                                                         | 9 | Crashes triggered across experiments                    | Evalute the fuzzing performance when fuzz testing a JSON parse under the interrupt and polling modes |
+| [10-RTOS-exit-condition](10-RTOS-exit-condition)                                                         | 10 | Validate if setting an exit point will help improve fuzzing performance                    | Setting an exit point after a password check function has been called to shorten corpus size during fuzzing |
 
 
 
