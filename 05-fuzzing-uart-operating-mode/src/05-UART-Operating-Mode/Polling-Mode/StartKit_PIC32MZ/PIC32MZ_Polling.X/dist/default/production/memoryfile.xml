@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/production/PIC32MZ_Polling.X.production.elf">                 
+    <memory name="program">                 
+      <units>bytes</units>                 
+      <length>525440</length>                 
+      <used>29132</used>                     
+      <free>496308</free>                     
+    </memory>                              
+    <memory name="data">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>696</used>                     
+      <free>130376</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 

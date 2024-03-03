@@ -15,5 +15,9 @@ The layout of this directory maps subdirectories to the respective experiments w
 
 
 
-# TODO
-explain how to build these firmware images
+# Building a firmware target
+The src folder in each experiment includes source code. Due to time constraints, although we haven't unlocked an option to compile them as cortex-M targets, users only need to open a project corresponding to each target in the src folder, then compile them with MPLABX v6.15 and XC4.35. 
+
+Moreover, each src folder contains compiled binary and its artifacts, feel free to gain more information from there if anything goes unexpected.
+
+Beware that the experiment results may differ if you compile them with a different toolchain than aforementioned one.

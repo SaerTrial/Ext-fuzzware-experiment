@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/default" -I"../src/mips" -I"../src/packs/PIC32MX795F512L_DFP" -Wall   -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  E:\MPLABX_projects\Code Coverage Test\PIC32MX-JSON-Interrupt\firmware\src\config\default\stdio\xc32_monitor.c
