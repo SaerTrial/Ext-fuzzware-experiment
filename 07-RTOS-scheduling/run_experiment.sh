@@ -17,16 +17,7 @@ fi
 # Experiment default: 1 repetition
 EXPERIMENT_REPETITION_COUNT=1
 
-
-# Default sequential config (80 days of time): 10 repetitions, 8 targets, with modeling, no parallelization
 SKIP_NON_MODELING=1
-
-# For a more lightweight version of the experiment, we can run everything a single time, and possibly run multiple experiments in parallel
-# This will allow reproducing the data used for Figure 5 in Section 6.2 and Table 5 in the appendix of the paper (excluding re-runs for averages).
-# FUZZING_RUNTIME=24:00:00
-# EXPERIMENT_REPETITION_COUNT=1
-# NUM_PARALLEL_INSTANCES=2
-# SKIP_NON_MODELING=1
 
 fuzzware checkenv -n $NUM_PARALLEL_INSTANCES || { echo "Error during initial sanity checks. Please fix according to debug output."; exit 1; }
 
@@ -45,4 +36,3 @@ fi
 
 "$DIR"/check_results.py "$DIR/groundtruth.csv" || { echo "[ERROR] run_targets failed"; exit 1; }
 
-#$DIR/run_metric_aggregation.py

@@ -83,11 +83,6 @@ for target_name in target_names:
         target_dict[target_name] = list()
     target_dict[target_name].append(dataset)
 
-# for target_name, timing in target_dict.items():
-#     print(f"{target_name}")
-#     for each in timing:
-#         print(f"{each.mode}: {each.processed_dataset}")
-
 wrapper_plot(target_dict)
 
 
