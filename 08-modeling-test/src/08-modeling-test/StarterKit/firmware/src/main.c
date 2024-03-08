@@ -42,6 +42,10 @@ char* handle_B(){
     return "B";
 }
 
+char* handle_C(){
+    return "C";
+}
+
 void bitmask_model(){
     int rByte;
     rByte = U1RXREG & 0xFF;
@@ -49,7 +53,7 @@ void bitmask_model(){
      switch((uint8_t) rByte){
             case 0x1: handle_A(); break;
             case 0x2: handle_B(); break;
-            case 0x3: UART1_Write("0x3\n", 4); break;
+            case 0x3: handle_C();; break;
             default: break;
      }
 }
@@ -65,26 +69,37 @@ int identity_model(){
 }
 
 
-void set_model(){
+void set_switch_model(){
         int rByte;
         rByte = U1RXREG;
         // set model
         switch((uint8_t)rByte){
             case 0x1: handle_A(); break;
             case 0x2: handle_B(); break;
-            case 0x3: UART1_Write("0x3\n", 4); break;
+            case 0x3: handle_C(); break;
             default: break;
         }
-        
-        if(U1RXREG == 0x100){
-            handle_A();
-        }
-        else if(U1RXREG == 0x200){
-            handle_B();
-        }else {
-            UART1_Write("Test\n", 5);
-        }
 }
+
+
+void set_if_else_model(){
+    int rByte;
+    rByte = U1RXREG;
+    // set model
+    if(rByte == 0x100){
+        handle_A();
+    }
+    else if(rByte == 0x200){
+        handle_B();
+    }else {
+        handle_C();
+    }
+    
+    return ;
+        
+        
+}
+
 
 uint32_t passthrough_in_a_func_call(uint32_t rByte){
     // passthrough
@@ -103,26 +118,20 @@ void bitmask_in_a_func_call(uint32_t rByte){
      switch(rByte){
             case 0x1: handle_A(); break;
             case 0x2: handle_B(); break;
-            case 0x3: UART1_Write("0x3\n", 4); break;
+            case 0x3: handle_C();; break;
             default: break;
      }
 }
 
 void set_in_a_func_call(uint32_t rByte){
-//        switch(rByte){
-//            case 0x1: handle_A(); break;
-//            case 0x2: handle_B(); break;
-//            case 0x3: UART1_Write("0x3\n", 4); break;
-//            default: break;
-//        }
-        
+
         if(rByte == 0x100){
             handle_A();
         }
         else if(rByte == 0x200){
             handle_B();
         }else {
-            UART1_Write("Test\n", 5);
+            handle_C();
         }
 }
 
@@ -153,8 +162,8 @@ int main ( void )
         /* UART1_ReceiverIsReady */
         while(_U1STA_URXDA_MASK != (U1STA & _U1STA_URXDA_MASK));
         
-
-        set_model();
+        set_switch_model();
+        set_if_else_model();
         bitmask_model();
         passthrough_model();
         identity_model();
@@ -178,6 +187,7 @@ int main ( void )
 
     return ( EXIT_FAILURE );
 }
+
 
 /*******************************************************************************
  End of File

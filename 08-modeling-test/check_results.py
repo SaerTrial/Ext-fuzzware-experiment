@@ -66,7 +66,7 @@ def main(file_path):
     for target_name in target_names:
         print(target_name)
         target_mmio_config = dict()
-        projdirs = glob.glob(os.path.join(DIR, target_name, "fuzzware-project*-run-[0-9][0-9]"))
+        projdirs = glob.glob(os.path.join(DIR, target_name, "fuzzware-project"))
         if not projdirs:
             print(f"[WARNING] Could not find any project directories for target '{target_name}'")
             continue
@@ -80,13 +80,12 @@ def main(file_path):
     entries = parse_groundtruth_csv(file_path)
     successes, failures = [], []
     for elf_path, model_type, mmio_declaration, comment in entries:
-        # print("elf_path:", elf_path)
         target_name = elf_path.split("/")[1].split(".")[0]
         elf_name = os.path.basename(elf_path)
         resolved_mmio_declaration = {(f"0x{pattern.search(md).group(1)}", f"0x{pattern.search(md).group(2)}") for md in mmio_declaration.split(",")}
 
         result = set.intersection(all_mmio_config[target_name][model_type], resolved_mmio_declaration)
-	
+        # print(f"{target_name}:{model_type}:{all_mmio_config[target_name][model_type]}:{resolved_mmio_declaration}")
         if len(result):
             successes.append((elf_name, comment))
         else:
