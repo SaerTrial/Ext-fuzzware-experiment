@@ -2,6 +2,9 @@
 
 These experiments are designed to evaluate the capability of extended Fuzzware against PIC32MZ/X firmware samples.
 
+The extended system could be found in [Ext-fuzzware repository](https://github.com/SaerTrial/Ext-fuzzware).
+
+
 # Directory Layout
 The layout of this directory maps subdirectories to the respective experiments within the publication.
 
