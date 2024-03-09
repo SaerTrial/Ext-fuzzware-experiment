@@ -15,11 +15,9 @@ Runtime: <= 24h on a single instance.
 RAM: 4GB RAM per parallel instance (1-2GB per instance could suffice as well)
 
 Estimated Run Time details:
-For this experiment, each one of the 46 samples is run for 15 minutes, and then traces are generated for each sample.
+For this experiment, each one of the 27 samples is run for 15 minutes, and then traces are generated for each sample.
 
-With a single fuzzing instance, fuzzing will require ~12 hours, with additional run-time for full trace generation. Overall, the experiment should conclude within 24 hours maximum.
-
-The fuzzing stage can be sped up by multiprocessing. Fuzzing multiple targets at once can be enabled by specifying how many instances to run in parallel as an argument to `./run_fuzzers.sh`.
+The fuzzing stage can be sped up by multiprocessing. Fuzzing multiple targets at once can be enabled by specifying how many instances to run in parallel as an argument to `./run_experiment.sh`. By default, the number of instances is 4 and users can modify according to their CPU cores.
 
 ## Groundtruth
 To be able to test whether unit tests are passed, we generated the required ground truth by first analyzed each sample and determined which coverage is required to occur (possibly with additional ordering requirements) to indicate that a given test case has been passed.
