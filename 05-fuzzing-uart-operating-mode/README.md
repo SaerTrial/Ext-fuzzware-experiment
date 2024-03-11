@@ -6,8 +6,8 @@ Invocation: `./run_experiment.sh 8 10`, which runs the entire experiment with 8 
 
 
 ## Computation Resources
-Runtime: 24*8 hours on 8 instances.
-RAM: 8GB RAM per parallel instance
+Runtime: 24*10 hours on 8 instances.
+RAM: 8GB RAM per parallel instance.
 
 Estimated Run Time details:
 For this experiment, each of target is evaluted for 10 24-hour runs.
@@ -17,5 +17,6 @@ The fuzzing stage can be sped up by multiprocessing. Fuzzing multiple targets at
 
 
 ## Expected Results
+
 Regarding FreeRTOS targets, both modes should be failed to progress in this testing, while bare-metal firmware samples can be able to reach the deep logic of the password reader.
 
