@@ -6,9 +6,10 @@ Invocation: `./run_experiment.sh`
 
 
 ## Computation Resources
-Estimated Run Time details:
-For this experiment, each of target is evaluted for 15 mins.
+For this experiment, each of firmware target is evaluated for 15 mins. 
+Runtime: 2*15 mins on 1 instance.
+RAM: 4GB RAM per parallel instance.
 
 
 ## Expected Results
-All scheduling scenarios should be passed against groudtruth.csv.
+All context-switch scenarios should be passed against groudtruth.csv.
