@@ -101,110 +101,110 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1949220912/plib_clk.o: ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c  .generated_files/flags/pic32mx470_curiosity/962cd25bb64a2fff9af3b3d6d457b898c9d1abd7 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1949220912/plib_clk.o: ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c  .generated_files/flags/pic32mx470_curiosity/4a77a46e54305d4f25a5a464a94c25b5e3e4cca5 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1949220912" 
 	@${RM} ${OBJECTDIR}/_ext/1949220912/plib_clk.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1949220912/plib_clk.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1949220912/plib_clk.o.d" -o ${OBJECTDIR}/_ext/1949220912/plib_clk.o ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/296236899/plib_evic.o: ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c  .generated_files/flags/pic32mx470_curiosity/a8553da69f1faa7188cbe32567153a28849ee7af .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/296236899/plib_evic.o: ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c  .generated_files/flags/pic32mx470_curiosity/76d69df10bac66a1c62798ec21aea0645d799f1f .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/296236899" 
 	@${RM} ${OBJECTDIR}/_ext/296236899/plib_evic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/296236899/plib_evic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/296236899/plib_evic.o.d" -o ${OBJECTDIR}/_ext/296236899/plib_evic.o ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/296183071/plib_gpio.o: ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c  .generated_files/flags/pic32mx470_curiosity/47e84f4c65bc4af124794a1e63e42819c1030c06 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/296183071/plib_gpio.o: ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c  .generated_files/flags/pic32mx470_curiosity/c1cee66d47e41a9288d9ac88522c031e2fe2fc6 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/296183071" 
 	@${RM} ${OBJECTDIR}/_ext/296183071/plib_gpio.o.d 
 	@${RM} ${OBJECTDIR}/_ext/296183071/plib_gpio.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/296183071/plib_gpio.o.d" -o ${OBJECTDIR}/_ext/296183071/plib_gpio.o ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o: ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c  .generated_files/flags/pic32mx470_curiosity/98d3d738203c70d09176f4a3507859e0f6a13f2d .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o: ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c  .generated_files/flags/pic32mx470_curiosity/1df44fafca681e040e550e50a86360eab79848b9 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/459041295" 
 	@${RM} ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o.d 
 	@${RM} ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o.d" -o ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1098930264/xc32_monitor.o: ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c  .generated_files/flags/pic32mx470_curiosity/559f35c7bcab4f4bf17840dec57d262d0bed3d0c .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1098930264/xc32_monitor.o: ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c  .generated_files/flags/pic32mx470_curiosity/775bfe335a08492d1b181d9bae1411a554030465 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1098930264" 
 	@${RM} ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1098930264/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/initialization.o: ../src/config/pic32mx470_curiosity/initialization.c  .generated_files/flags/pic32mx470_curiosity/6cc99c74f8aa45004e2268d6b1ff95f74409a92a .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/initialization.o: ../src/config/pic32mx470_curiosity/initialization.c  .generated_files/flags/pic32mx470_curiosity/c305e342a82d9ad07bd228bc22aecb685a54bc40 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/initialization.o.d" -o ${OBJECTDIR}/_ext/1130503790/initialization.o ../src/config/pic32mx470_curiosity/initialization.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/interrupts.o: ../src/config/pic32mx470_curiosity/interrupts.c  .generated_files/flags/pic32mx470_curiosity/78e6dff168978d2bdc648481a3dbd72bb4ec928c .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/interrupts.o: ../src/config/pic32mx470_curiosity/interrupts.c  .generated_files/flags/pic32mx470_curiosity/1a133b1495b885f4c922ead955e012375ce897a4 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/interrupts.o.d" -o ${OBJECTDIR}/_ext/1130503790/interrupts.o ../src/config/pic32mx470_curiosity/interrupts.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/exceptions.o: ../src/config/pic32mx470_curiosity/exceptions.c  .generated_files/flags/pic32mx470_curiosity/e19ad43e6c4f006216e42ebdb9ef13b852ed126e .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/exceptions.o: ../src/config/pic32mx470_curiosity/exceptions.c  .generated_files/flags/pic32mx470_curiosity/206f6afe8ebfee824fa8288c6b7ba9e89db84fd .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/exceptions.o.d" -o ${OBJECTDIR}/_ext/1130503790/exceptions.o ../src/config/pic32mx470_curiosity/exceptions.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/pic32mx470_curiosity/7d66c546bec122fbd0f2465aa4bc5d9d6f2f7372 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/pic32mx470_curiosity/9aab4a36ba988030c2e1fd39739d29e7cbeacb46 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
 else
-${OBJECTDIR}/_ext/1949220912/plib_clk.o: ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c  .generated_files/flags/pic32mx470_curiosity/e908c339c74ab2fc1a04d5844fcd2f6aaef6649a .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1949220912/plib_clk.o: ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c  .generated_files/flags/pic32mx470_curiosity/57fee116119ff56ae1270de6981dfde628ad833a .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1949220912" 
 	@${RM} ${OBJECTDIR}/_ext/1949220912/plib_clk.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1949220912/plib_clk.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1949220912/plib_clk.o.d" -o ${OBJECTDIR}/_ext/1949220912/plib_clk.o ../src/config/pic32mx470_curiosity/peripheral/clk/plib_clk.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/296236899/plib_evic.o: ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c  .generated_files/flags/pic32mx470_curiosity/2ef3991737406098458e60be00b81bc2eec3ab2e .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/296236899/plib_evic.o: ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c  .generated_files/flags/pic32mx470_curiosity/b246487fa41b1359c3f7e73256a9a33293e505f2 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/296236899" 
 	@${RM} ${OBJECTDIR}/_ext/296236899/plib_evic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/296236899/plib_evic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/296236899/plib_evic.o.d" -o ${OBJECTDIR}/_ext/296236899/plib_evic.o ../src/config/pic32mx470_curiosity/peripheral/evic/plib_evic.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/296183071/plib_gpio.o: ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c  .generated_files/flags/pic32mx470_curiosity/56e518ec629215d8436dba9f1ff022ab4933c7e2 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/296183071/plib_gpio.o: ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c  .generated_files/flags/pic32mx470_curiosity/ca8e1a719b04d5abc46019c89aa69c350de2de96 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/296183071" 
 	@${RM} ${OBJECTDIR}/_ext/296183071/plib_gpio.o.d 
 	@${RM} ${OBJECTDIR}/_ext/296183071/plib_gpio.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/296183071/plib_gpio.o.d" -o ${OBJECTDIR}/_ext/296183071/plib_gpio.o ../src/config/pic32mx470_curiosity/peripheral/gpio/plib_gpio.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o: ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c  .generated_files/flags/pic32mx470_curiosity/c4e8417f520bb3f0f70552a7fba52e00136d5458 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o: ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c  .generated_files/flags/pic32mx470_curiosity/afff296b90cbc2f7225eea4177e7f4d99349b8cc .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/459041295" 
 	@${RM} ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o.d 
 	@${RM} ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o.d" -o ${OBJECTDIR}/_ext/459041295/plib_spi2_slave.o ../src/config/pic32mx470_curiosity/peripheral/spi/spi_slave/plib_spi2_slave.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1098930264/xc32_monitor.o: ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c  .generated_files/flags/pic32mx470_curiosity/ac695c8e0243536e1d6388f0a2c7f39068b6c089 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1098930264/xc32_monitor.o: ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c  .generated_files/flags/pic32mx470_curiosity/1019aeef7b00cbd439039cd38571a4f17c9d5ea1 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1098930264" 
 	@${RM} ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1098930264/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/1098930264/xc32_monitor.o ../src/config/pic32mx470_curiosity/stdio/xc32_monitor.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/initialization.o: ../src/config/pic32mx470_curiosity/initialization.c  .generated_files/flags/pic32mx470_curiosity/ea6491f1097ec3ddbd82e463379c1b81503e45d .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/initialization.o: ../src/config/pic32mx470_curiosity/initialization.c  .generated_files/flags/pic32mx470_curiosity/5405930c6e4fce97f7d4dd5154f35640d89f5707 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/initialization.o.d" -o ${OBJECTDIR}/_ext/1130503790/initialization.o ../src/config/pic32mx470_curiosity/initialization.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/interrupts.o: ../src/config/pic32mx470_curiosity/interrupts.c  .generated_files/flags/pic32mx470_curiosity/6ed00a501c3fcdb0fcb58feb721f82b5176cf19a .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/interrupts.o: ../src/config/pic32mx470_curiosity/interrupts.c  .generated_files/flags/pic32mx470_curiosity/3dd2c8164a76447e0defc1959855dca4ceaccd76 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/interrupts.o.d" -o ${OBJECTDIR}/_ext/1130503790/interrupts.o ../src/config/pic32mx470_curiosity/interrupts.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1130503790/exceptions.o: ../src/config/pic32mx470_curiosity/exceptions.c  .generated_files/flags/pic32mx470_curiosity/c51a530204b81d2a15cda59470f7a231ab810501 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1130503790/exceptions.o: ../src/config/pic32mx470_curiosity/exceptions.c  .generated_files/flags/pic32mx470_curiosity/4978993ad28d02b020b5a09ecd139a5771fd930c .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1130503790" 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1130503790/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -fno-common -I"../src" -I"../src/config/pic32mx470_curiosity" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1130503790/exceptions.o.d" -o ${OBJECTDIR}/_ext/1130503790/exceptions.o ../src/config/pic32mx470_curiosity/exceptions.c    -DXPRJ_pic32mx470_curiosity=$(CND_CONF)    $(COMPARISON_BUILD)  -Wformat=2 -Werror-implicit-function-declaration -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/pic32mx470_curiosity/878f76d6cdeb36511af7ce9adc1a2067c0925ca5 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/pic32mx470_curiosity/9f15a3d3ff56b9508bedf12187fa12df49228de2 .generated_files/flags/pic32mx470_curiosity/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
@@ -244,3 +244,11 @@ endif
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${OBJECTDIR}
 	${RM} -r ${DISTDIR}
+
+# Enable dependency checking
+.dep.inc: .depcheck-impl
+
+DEPFILES=$(wildcard ${POSSIBLE_DEPFILES})
+ifneq (${DEPFILES},)
+include ${DEPFILES}
+endif

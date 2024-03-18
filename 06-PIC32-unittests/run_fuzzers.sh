@@ -25,7 +25,7 @@ if [ $(( 4 * $num_procs )) -gt $(cat /proc/sys/fs/inotify/max_user_instances) ];
     exit 1
 fi
 
-FUZZING_RUNTIME="00:15:00"
+FUZZING_RUNTIME="00:20:00"
 
 export AFL_SKIP_CPUFREQ=1
 ( for f in `find $DIR -iname '*.elf'`; do

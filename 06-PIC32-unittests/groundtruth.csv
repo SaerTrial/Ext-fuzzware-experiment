@@ -13,6 +13,12 @@ CURIOSITY/CURIOSITY-CORETIMER.elf	Callback/IRQ	timeout_handler	invocation of tim
 CURIOSITY/CURIOSITY-FREERTOS-TIMER1.elf	Callback/IRQ	vPortIncrementTick	Invocation of timer callback to increment timer tick count
 	Read	xTaskGetTickCount	Successfully reading timer value
 CURIOSITY/CURIOSITY-FREERTOS-SOFT_INT.elf	Callback/IRQ	vTaskSwitchContext	One byte or two byte read transfer cases of I2C_MasterReceive_BTF
+CURIOSITY/CURIOSITY-FreeRTOS-ADC.elf	Read	0x9D00297C	Read converted value after the completion of convertion
+CURIOSITY/CURIOSITY-FreeRTOS-I2C.elf	Callback/IRQ	0x9D002CD4 || 0x9D002D14	Read the data sent by I2C Master
+CURIOSITY/CURIOSITY-FreeRTOS-SPI.elf	Callback/IRQ	SPIEventHandler -> 0x9D001AB8	Read the data in SPIEventHandler
+CURIOSITY/CURIOSITY-FreeRTOS-UART.elf	Callback/IRQ	0x9D001BAC	Read the data available in UART buffer
+CURIOSITY/CURIOSITY-FreeRTOS-GPIO.elf	Write	0x9D0018F4 || 0x9D001900	Set LED on/off
+CURIOSITY/CURIOSITY-FreeRTOS-GPIO.elf	Callback/IRQ	SwitchPress_Handler -> 0x9D002190	context switch after the GPIO interrupt handler is executed
 STARTER/STARTER-USART.elf	Read	0x9D00288C	Successful read from receive buffer (which gets filled in IRQ handler)
 	Write	0x9D002EDC	Successful write case in uart_write
 STARTER/STARTER-GPIO_INT.elf	Callback/IRQ	controlLED	"Invocation of gpio callback. Symbol known to IDA as ""cb"""
@@ -24,5 +30,11 @@ STARTER/STARTER-FREERTOS-TIMER1.elf	Callback/IRQ	vPortIncrementTick	"Invocation 
 	Read	xTaskGetTickCount	Successfully reading timer value
 STARTER/STARTER-FREERTOS-SOFT_INT.elf	Callback/IRQ	vTaskSwitchContext	Core software interrupt is triggered for context switch
 STARTER/STARTER-ADC.elf	Read	ADCHS_ChannelResultIsReady -> ADCHS_ChannelResultGet	adc_conversion_check -> get result in
-STARTER/STARTER-SPI.elf	Read	0x9D000CB0	spi_receiver done
-STARTER/STARTER-CORETIMER.elf	Callback/IRQ	timeout_handler	invocation of timer callback
+STARTER/STARTER-SPI.elf	Read	0x9D000CB0	Once spi_receiver is done
+STARTER/STARTER-CORETIMER.elf	Callback/IRQ	timeout_handler	Invocation of timer callback
+STARTER/STARTER-FreeRTOS-ADC.elf	Read	ADCHS_ChannelResultGet -> 0x9D002E94	Read converted value after the completion of convertion
+STARTER/STARTER-FreeRTOS-I2C.elf	Callback/IRQ	0x9D0039A8 || 0x9D0039C8	Read the data sent by I2C Master
+STARTER/STARTER-FreeRTOS-SPI.elf	Callback/IRQ	SPI0_Callback	Invocation of callback once data transfer is done in SPI
+STARTER/STARTER-FreeRTOS-UART.elf	Callback/IRQ	0x9D002978	Read once data present in UART
+STARTER/STARTER-FreeRTOS-GPIO.elf	Write	0x9D00296C || 0x9D002978	Set LED on/off
+STARTER/STARTER-FreeRTOS-GPIO.elf	Callback/IRQ	SwitchPress_Handler -> 0x9D002EAC	context switch after the GPIO interrupt handler is executed

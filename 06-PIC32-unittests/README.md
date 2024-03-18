@@ -5,9 +5,13 @@ In this experiment we test whether Ext-fuzzware is able to pass the unit tests t
 Invocation: `./run_experiment.sh`
 
 ## Expected Result
+
+Each row in the groundtruth.csv represents one test case.
+
+
 At the end, the following should be output via stdout:
 ```
-Got 27 successes and 0 failures
+Got 39 successes and 0 failures
 ```
 
 ## Computation Resources
@@ -15,7 +19,7 @@ Runtime: <= 24h on a single instance.
 RAM: 4GB RAM per parallel instance (1-2GB per instance could suffice as well)
 
 Estimated Run Time details:
-For this experiment, each one of the 27 samples is run for 15 minutes, and then traces are generated for each sample.
+For this experiment, each one of the 28 samples is run for 20 minutes, and then traces are generated for each sample.
 
 The fuzzing stage can be sped up by multiprocessing. Fuzzing multiple targets at once can be enabled by specifying how many instances to run in parallel as an argument to `./run_experiment.sh`. By default, the number of instances is 4 and users can modify according to their CPU cores.
 
