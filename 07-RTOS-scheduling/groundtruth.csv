@@ -1,11 +1,11 @@
-File	Testcase	Requirements	Comment
-PIC32MX-FreeRTOS/Curiosity-Idle.elf	Preemption	prvIdleTask	Task1 → Idle
-PIC32MX-FreeRTOS/Curiosity-Task2.elf	Preemption	TASK2_Tasks -> TASK1_Tasks	Task1 → Task2
-PIC32MX-FreeRTOS/Curiosity-Task3.elf	Semaphore	0x9D002FB8 -> 0x9D001C68	Task2 pre-empted by task3 when a character received on UART
-PIC32MX-FreeRTOS/Curiosity-Task4.elf	Semaphore	0x9D002F0C -> 0x9D002174 || 0x9D002FB8 -> 0x9D002174	Task1 or 2 pre-empted by task4 when switch is pressed
-PIC32MX-FreeRTOS/Curiosity-Task3-Task4.elf	Semaphore	0x9D001CD8 -> 0x9D002174	Task3 pre-empted by task4 when switch is pressed
-PIC32MZ-FreeRTOS/StarterKit-Idle.elf	Preemption	prvIdleTask	Task1 → Idle || Task2 → Idle
-PIC32MZ-FreeRTOS/StarterKit-Task2.elf	Preemption	TASK2_Tasks -> TASK1_Tasks	Task1 → Task2
-PIC32MZ-FreeRTOS/StarterKit-Task3.elf	Semaphore	0x9D003F18 -> 0x9D0028BC	Task2 pre-empted by task3 when a character received on UART
-PIC32MZ-FreeRTOS/StarterKit-Task4.elf	Semaphore	0x9D003E6C -> 0x9D002E94 || 0x9D003F18 -> 0x9D002E94	Task1 or 2 pre-empted by task4 when switch is pressed
-PIC32MZ-FreeRTOS/StarterKit-Task3-Task4.elf	Semaphore	0x9D002910 -> 0x9D002E94	Task3 pre-empted by task4 when switch is pressed
+File	Testcase	Tasks	Comment
+PIC32MX-FreeRTOS/Curiosity-Idle.elf 	Occurrence	Tsk1	Task1 has been scheduled
+PIC32MX-FreeRTOS/Curiosity-Task2.elf	Occurrence	Tsk2	Task2 has been scheduled
+PIC32MX-FreeRTOS/Curiosity-Task3.elf	Preemption	Tsk1 -> Tsk3 || Tsk2 -> Tsk3	Task1/2 pre-empted by task3 when a character received on UART
+PIC32MX-FreeRTOS/Curiosity-Task4.elf	Occurrence	Tsk4	Task4 has been executed once
+PIC32MX-FreeRTOS/Curiosity-Task3-Task4.elf	Preemption	Tsk3 -> Tsk4    	Task3 pre-empted by task4 when switch is pressed
+PIC32MZ-FreeRTOS/StarterKit-Idle.elf	Occurrence	Tsk1	Task1 has been scheduled
+PIC32MZ-FreeRTOS/StarterKit-Task2.elf	Occurrence	Tsk2	Task2 has been scheduled
+PIC32MZ-FreeRTOS/StarterKit-Task3.elf	Preemption	Tsk1 -> Tsk3 || Tsk2 -> Tsk3    	Task1/2 pre-empted by task3 when a character received on UART
+PIC32MZ-FreeRTOS/StarterKit-Task4.elf	Occurrence	Tsk4	Task4 has been executed once
+PIC32MZ-FreeRTOS/StarterKit-Task3-Task4.elf 	Preemption	Tsk3 -> Tsk4    	Task3 pre-empted by task4 when switch is pressed

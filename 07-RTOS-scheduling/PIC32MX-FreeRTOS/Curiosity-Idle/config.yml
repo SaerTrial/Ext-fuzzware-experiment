@@ -41,7 +41,7 @@ memory_map:
 
 interrupt_triggers:
   timer_tick:
-    every_nth_tick: 0x50
+    every_nth_tick: 0x200
     irq: 4
 
 handlers:

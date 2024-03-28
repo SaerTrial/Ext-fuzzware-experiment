@@ -41,10 +41,10 @@ memory_map:
 
 interrupt_triggers:
   switch_press:
-    every_nth_tick: 0x200
+    every_nth_tick: 0x400
     irq: 119
   timer_tick:
-    every_nth_tick: 0x10
+    every_nth_tick: 0x200
     irq: 4
 
 handlers:

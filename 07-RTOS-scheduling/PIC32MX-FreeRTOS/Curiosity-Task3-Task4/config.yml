@@ -47,7 +47,7 @@ interrupt_triggers:
     addr: 0x9D001CD8 # Task3 counting ticks
     irq: 47
   timer_tick:
-    every_nth_tick: 0x50
+    every_nth_tick: 0x200
     irq: 4
 
 handlers:

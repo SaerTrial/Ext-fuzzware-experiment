@@ -27,9 +27,9 @@ target_list=$@
 echo "running with run_with_modeling=$run_with_modeling, experiment_repetition_count=$experiment_repetition_count, num_parallel_procs=$num_parallel_procs, fuzzing_runtime=$fuzzing_runtime"
 
 project_base_name="fuzzware-project"
-statistics_names="coverage crashcontexts"
+statistics_names="coverage"
 fuzzing_instances="-n 1"
-extra_emu_args="--run-for $fuzzing_runtime --silent-workers $fuzzing_instances"
+extra_emu_args="--run-for $fuzzing_runtime $fuzzing_instances"
 
 if [ $run_with_modeling -eq 1 ]; then
     # For the normal modeling case, add some more statistics
