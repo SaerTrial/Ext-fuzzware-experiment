@@ -1,24 +1,7 @@
 #!/usr/bin/env python3
 
-""" PIC32 Uuit Test Case Passing Checks
-This script checks whether test cases have been passed during fuzzing based
-on the groundtruth supplied in a CSV file.
-
-The script takes the following steps:
-1. Read in groundtruth CSV to find required basic block coverage for test passing.
-2. For each target, check fuzzing code coverage against ground truth
-    - For ordered coverage requirements (ground truth entries containing "->"), check full basic block traces
-    - For unordered coverage (single-bb coverage requirement), check basic block sets
-3. Print the resulting fail / passing numbers
-"""
-
 import sys
 import os
-from fuzzware_harness.util import load_config_deep, parse_symbols
-from fuzzware_harness.tracing.serialization import parse_bbl_trace
-from fuzzware_pipeline.util.eval_utils import find_traces_covering_all
-from fuzzware_pipeline.naming_conventions import trace_paths_for_trace, input_for_trace_path
-import subprocess
 import glob
 import re
 
